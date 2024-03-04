@@ -1,0 +1,23 @@
+To create a new Page:
+dotnet new page --name Welcome -o Pages --namespace WebApplication1.Pages
+
+to run the server:
+dotnet watch run
+
+to start a new project:
+dotnet new sln
+
+to start a new web application project:
+dotnet new webapp -o WebApplication1
+
+to add a webapplication to project:
+dotnet sln add WebApplication1/WebApplication1.csproj
+
+
+################ ********************#####################
+so typically you start a project like this:
+
+dotnet new sln
+dotnet new webapp -o WebApplication1
+dotnet sln add WebApplication1/WebApplication1.csproj
+dotnet new page --name Welcome -o Pages --namespace WebApplication1.Pages
