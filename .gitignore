@@ -7,3 +7,4 @@ wwwroot/
 
 # ignore ALL files in ANY directory named wwwroot
 bin/
+NoteTakingFile
