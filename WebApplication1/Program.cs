@@ -1,15 +1,23 @@
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Data;
+using WebApplication1.Services;
+// using WebApplication1.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorPages();
-
 builder.Services.AddDbContext<WebApplication1Context>(options =>
 {
     options.UseSqlite(builder.Configuration.GetConnectionString("WebApplication1Context"));
 });
+
+
+builder.Services.AddRazorPages();
+
+builder.Services.AddScoped<ICodingRegionService, CodingRegionService>();
+
+//builder.Services.AddScoped<ICodingRegionService,CodingRegionService>();
+
 
 var app = builder.Build();
 

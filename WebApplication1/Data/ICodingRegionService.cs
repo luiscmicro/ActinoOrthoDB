@@ -6,7 +6,7 @@ namespace WebApplication1.Services{
         Task<List<CodingRegion>> GetAllAsync();
         Task<CodingRegion> FindAsync(int id);
         Task<CodingRegion> UpdateAsync(CodingRegion property);
-        Task DeleteAsync(int id);
+        //Task DeleteAsync(int id);
     }
 
 }

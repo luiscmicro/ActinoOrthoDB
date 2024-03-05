@@ -1,0 +1,39 @@
+@page
+@model WebApplication1.Pages.GenomeManager.GenomeUI.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Genome</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Genome.Name" class="control-label"></label>
+                <input asp-for="Genome.Name" class="form-control" />
+                <span asp-validation-for="Genome.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Upload" class="control-label"></label><br />
+                <input asp-for="Upload" accept=".faa" />
+                <span asp-validation-for="Upload" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

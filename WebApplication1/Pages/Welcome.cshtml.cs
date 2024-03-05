@@ -4,15 +4,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 namespace WebApplication1.Pages
 {
    
-    public class CodingRegion{
-        public int Id {get; set;}
-        public int GenomeId {get; set;}
-        public int Location {get;set;}
-        public string Sequence {get; set;}
-    }
-
-
-
     public class WelcomeModel : PageModel
     {
         public string Message { get; set; }

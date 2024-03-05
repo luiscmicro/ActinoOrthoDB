@@ -25,11 +25,14 @@ namespace WebApplication1.Migrations
                     b.Property<int>("GenomeId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Header")
+                        .HasMaxLength(1000)
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("Location")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Sequence")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -46,7 +49,6 @@ namespace WebApplication1.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("TEXT");
 
