@@ -1,2 +1,9 @@
 #ignore databases
 *.db
+# ignore ALL files in ANY directory named obj
+obj/
+# ignore ALL files in ANY directory named wwwroot
+wwwroot/
+
+# ignore ALL files in ANY directory named wwwroot
+bin/
