@@ -15,6 +15,7 @@ builder.Services.AddDbContext<WebApplication1Context>(options =>
 builder.Services.AddRazorPages();
 
 builder.Services.AddScoped<ICodingRegionService, CodingRegionService>();
+builder.Services.AddScoped<IGenomeService, GenomeService>();
 
 //builder.Services.AddScoped<ICodingRegionService,CodingRegionService>();
 

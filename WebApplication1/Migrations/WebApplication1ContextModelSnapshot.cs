@@ -32,6 +32,9 @@ namespace WebApplication1.Migrations
                     b.Property<int>("Location")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("LocusTag")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Sequence")
                         .HasColumnType("TEXT");
 

@@ -13,11 +13,7 @@ public class GenomeService : IGenomeService
         return await _context.Genomes.FindAsync(id);
     }
 
-    public async Task<List<Genome>> GetAllAsync() =>
-        await _context.Genomes
-        .Include(x => x.Name)
-        .Include(x => x.Id)
-        .ToListAsync();
+    public async Task<List<Genome>> GetAllAsync() => await _context.Genomes.ToListAsync();
 
 
 

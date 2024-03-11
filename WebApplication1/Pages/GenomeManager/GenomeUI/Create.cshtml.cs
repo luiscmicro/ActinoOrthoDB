@@ -55,8 +55,6 @@ namespace WebApplication1.Pages.GenomeManager.GenomeUI
         }
         private List<CodingRegion> ParseFaaFile(string faafile){
             var str = faafile;
-            //Console.WriteLine(faafile);
-            //Console.WriteLine("that was one line");
             List<CodingRegion> list = new List<CodingRegion>();
             CodingRegion cds_temp = new CodingRegion();
             using (System.IO.StringReader reader = new System.IO.StringReader(faafile)) {
@@ -71,23 +69,39 @@ namespace WebApplication1.Pages.GenomeManager.GenomeUI
                         if(string.IsNullOrEmpty(cds_temp.Header)){
                             //Console.WriteLine("That was the first protein");
                             cds_temp.Header = line;
+                            string[] faa_header = line.Split(".");
+                            //Console.WriteLine("Protein position in Genome"+faa_header[3]);
+                            try{
+                                cds_temp.Location=Int32.Parse(faa_header[3]);
+                            }
+                            catch (FormatException){
+                                Console.WriteLine($"Unable to parse '{faa_header[3]}'");
+                            }
+
+                            
                         }else{
                             list.Add(cds_temp);
                             cds_temp = new CodingRegion();
                             cds_temp.GenomeId = Genome.Id;
                             cds_temp.Header = line;
+                            string[] faa_header = line.Split(".");
+                            //Console.WriteLine("Protein position in Genome"+faa_header[3]);
+                            try{
+                                cds_temp.Location=Int32.Parse(faa_header[3]);
+                            }
+                            catch (FormatException){
+                                Console.WriteLine($"Unable to parse '{faa_header[3]}'");
+                            }
+                            
                         }
                         
                     }else{
                         cds_temp.AddToSequence(line);
-                        //Console.WriteLine("Storing Protein Sequence");
                     }
                         
                 }
 
             }
-            //Console.WriteLine("File parsed");
-            //Console.WriteLine("We foundnd this number of proteins:" + list.Count);
             return list;
         }
 

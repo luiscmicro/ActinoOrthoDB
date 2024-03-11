@@ -9,6 +9,8 @@ namespace WebApplication1.Data
         public int Location {get;set;}
         public string? Sequence {get; set;}
         public string? Header {get; set;}
+
+        public string? LocusTag {get;set;}
         
         public int AddToSequence(string sequence){
             if(sequence.Length >0){

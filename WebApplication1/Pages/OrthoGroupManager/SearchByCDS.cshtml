@@ -1,0 +1,32 @@
+﻿@page
+@model WebApplication1.Pages.OrthoGroupManager.SearchByCDSModel
+
+@{
+    ViewData["Title"] = "Search OrthoGroups by CDS";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Genomes[0].Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Genomes) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <form method="post">
+                <select asp-for="GenomeId" class="form-control" asp-items="Model.CDSList"></select>
+                <input type="submit" value="Submit" class="btn btn-primary" />
+                </form>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
