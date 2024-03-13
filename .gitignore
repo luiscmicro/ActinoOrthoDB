@@ -8,3 +8,4 @@ wwwroot/
 # ignore ALL files in ANY directory named wwwroot
 bin/
 NoteTakingFile
+WebApplication1/Data/WebApplication1.db

@@ -38,6 +38,11 @@ namespace WebApplication1.Pages.OrthoGroupManager
         public async Task<IActionResult> OnPostAsync()
         {
             Console.WriteLine("Hello we are on Post");
+            
+
+
+
+
             Genomes = await _context.Genomes.ToListAsync();
             CDS= await _context.CodingRegions.ToListAsync();
             CDSList = await GetGenomesOptions();

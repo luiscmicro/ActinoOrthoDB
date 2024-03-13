@@ -27,6 +27,7 @@ namespace WebApplication1.Data
             //builder.Entity<Genome>().HasMany(s => s.Proteins).WithOne(s=>s.GenomeId);
             
         }
+        public DbSet<WebApplication1.Data.OrthoGroup> OrthoGroup { get; set; }
 
 
     }

@@ -35,7 +35,8 @@ namespace WebApplication1.Pages.GenomeManager.GenomeUI
         [BindProperty]                                                      
         [Required]                                                          
         [UploadFileExtensions(Extensions = ".faa")]                         
-        public IFormFile Upload { get; set; }                               
+        public IFormFile Upload { get; set; }
+                                      
         [TempData]                                                          
         public string GenomeFastaFile { get; set; }
 
@@ -69,6 +70,7 @@ namespace WebApplication1.Pages.GenomeManager.GenomeUI
                         if(string.IsNullOrEmpty(cds_temp.Header)){
                             //Console.WriteLine("That was the first protein");
                             cds_temp.Header = line;
+                            cds_temp.genomeFile = System.IO.Path.GetFileNameWithoutExtension(Upload.FileName);
                             string[] faa_header = line.Split(".");
                             //Console.WriteLine("Protein position in Genome"+faa_header[3]);
                             try{
@@ -84,6 +86,7 @@ namespace WebApplication1.Pages.GenomeManager.GenomeUI
                             cds_temp = new CodingRegion();
                             cds_temp.GenomeId = Genome.Id;
                             cds_temp.Header = line;
+                            cds_temp.genomeFile = System.IO.Path.GetFileNameWithoutExtension(Upload.FileName);
                             string[] faa_header = line.Split(".");
                             //Console.WriteLine("Protein position in Genome"+faa_header[3]);
                             try{
@@ -117,7 +120,7 @@ namespace WebApplication1.Pages.GenomeManager.GenomeUI
             }
 
              Task<string> fileUploaded = ReadFormFileAsync(Upload);
-             Console.WriteLine("Some message here");
+             //Console.WriteLine("Some message here");
              var FaaFileString = await fileUploaded;
 
              Genome.Proteins = ParseFaaFile(FaaFileString);

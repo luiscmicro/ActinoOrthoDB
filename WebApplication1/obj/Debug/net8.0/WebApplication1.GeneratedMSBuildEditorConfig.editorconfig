@@ -46,6 +46,30 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/luismcantu/Documents/TraxlerLab/coding/ActinoOrthoDB/WebApplication1/Pages/OrthoGroupManager/OrthoGroupUI/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3J0aG9Hcm91cE1hbmFnZXIvT3J0aG9Hcm91cFVJL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/luismcantu/Documents/TraxlerLab/coding/ActinoOrthoDB/WebApplication1/Pages/OrthoGroupManager/OrthoGroupUI/CreateBatchOrthoGroups.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3J0aG9Hcm91cE1hbmFnZXIvT3J0aG9Hcm91cFVJL0NyZWF0ZUJhdGNoT3J0aG9Hcm91cHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/luismcantu/Documents/TraxlerLab/coding/ActinoOrthoDB/WebApplication1/Pages/OrthoGroupManager/OrthoGroupUI/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3J0aG9Hcm91cE1hbmFnZXIvT3J0aG9Hcm91cFVJL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/luismcantu/Documents/TraxlerLab/coding/ActinoOrthoDB/WebApplication1/Pages/OrthoGroupManager/OrthoGroupUI/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3J0aG9Hcm91cE1hbmFnZXIvT3J0aG9Hcm91cFVJL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/luismcantu/Documents/TraxlerLab/coding/ActinoOrthoDB/WebApplication1/Pages/OrthoGroupManager/OrthoGroupUI/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3J0aG9Hcm91cE1hbmFnZXIvT3J0aG9Hcm91cFVJL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/luismcantu/Documents/TraxlerLab/coding/ActinoOrthoDB/WebApplication1/Pages/OrthoGroupManager/OrthoGroupUI/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3J0aG9Hcm91cE1hbmFnZXIvT3J0aG9Hcm91cFVJL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/luismcantu/Documents/TraxlerLab/coding/ActinoOrthoDB/WebApplication1/Pages/OrthoGroupManager/SearchByCDS.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3J0aG9Hcm91cE1hbmFnZXIvU2VhcmNoQnlDRFMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
